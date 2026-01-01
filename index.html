@@ -200,6 +200,7 @@
                 padding: 4px 8px;
                 font-weight: bold;
                 font-size: 24px;
+                transition: opacity 0.3s ease;
                 text-shadow: 0 0 10px rgba(0,0,0,0.3);
                 opacity: 0;
                 width : fit-content;
@@ -313,6 +314,7 @@
             } else {
                 actualCard.classList.add('reset')
                 actualCard.classList.remove('go-right', 'go-left')
+                actualCard.querySelectorAll('.choice').forEach(element => { element.style.opacity = 0})
             }
 
             actualCard.addEventListener('transitionend', () => {
